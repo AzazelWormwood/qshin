@@ -1,0 +1,42 @@
+$molecule
+0 1
+      H       -1.222712   -2.174681   -0.000001
+      C       -0.697447   -1.223724   -0.000001
+      C        0.700628   -1.197151    0.000000
+      H        1.261684   -2.127433    0.000001
+      C        1.526556    0.024322    0.000001
+      H        2.462768    0.047651    0.000001
+      C        0.654591    1.224479   -0.000002
+      H        1.179874    2.175425   -0.000004
+      C       -0.743474    1.197901    0.000001
+      H       -1.304526    2.128187    0.000005
+      C       -1.419431   -0.026201    0.000000
+      H       -2.505619   -0.046903   -0.000001 
+$end
+
+
+$rem
+jobtype = opt
+exchange = b3lyp
+basis = 6-31++G(d,p)
+iqmol_fchk = true
+symmetry = false
+scf_convergence = 8
+$end
+
+@@@
+
+$molecule
+read
+$end
+
+$rem
+jobtype = freq
+exchange = b3lyp
+basis = 6-31++G(d,p)
+iqmol_fchk = true
+symmetry = false
+scf_guess = read
+$end
+
+
